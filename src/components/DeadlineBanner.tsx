@@ -84,7 +84,7 @@ const DeadlineBanner = ({ deadline }: DeadlineBannerProps) => {
             </p>
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex items-center gap-3 md:gap-4">
               <TimeBox label="Horas" value={hours} />
               <span className="text-2xl font-bold -mt-3">:</span>
