@@ -7,65 +7,63 @@ All colors MUST be HSL.
 */
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+:root {
+  --background: 30 56% 87%;       /* Bege claro */
+  --foreground: 12 24% 40%;       /* Marrom terroso */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 12 24% 40%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 12 24% 40%;
 
-    --primary: 262 83% 58%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 262 100% 70%;
+  --primary: 195 46% 48%;         /* Azul petróleo */
+  --primary-foreground: 0 0% 100%;
+  --primary-glow: 195 46% 60%;
 
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
+  --secondary: 187 27% 64%;       /* Azul claro */
+  --secondary-foreground: 12 24% 40%;
 
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
+  --muted: 200 24% 82%;           /* Azul gelo */
+  --muted-foreground: 12 24% 40%;
 
-    --accent: 262 83% 58%;
-    --accent-foreground: 0 0% 100%;
+  --accent: 15 30% 82%;           /* Bege rosado */
+  --accent-foreground: 12 24% 40%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 262 83% 58%;
+  --border: 330 5% 85%;           /* Cinza claro */
+  --input: 330 5% 85%;
+  --ring: 195 46% 48%;
 
-    --radius: 0.75rem;
+  --radius: 0.75rem;
 
-    /* Event-specific design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(262, 83%, 58%), hsl(292, 84%, 61%));
-    --gradient-secondary: linear-gradient(135deg, hsl(220, 14.3%, 95.9%), hsl(210, 20%, 98%));
-    --gradient-hero: linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(292, 84%, 61%) 50%, hsl(322, 85%, 64%) 100%);
-    
-    --shadow-glow: 0 0 40px hsl(262 83% 58% / 0.3);
-    --shadow-elegant: 0 10px 40px -15px hsl(262 83% 58% / 0.4);
-    
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* Gradientes com base na paleta extraída */
+  --gradient-primary: linear-gradient(
+    135deg,
+    hsl(195 46% 48%),
+    hsl(187 27% 64%),
+    hsl(30 56% 87%)
+  );
 
-    --sidebar-background: 0 0% 98%;
+  --gradient-secondary: linear-gradient(
+    135deg,
+    hsl(15 30% 82%),
+    hsl(350 14% 93%)
+  );
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(195 46% 48%) 0%,
+    hsl(187 27% 64%) 50%,
+    hsl(30 56% 87%) 100%
+  );
 
-    --sidebar-primary: 240 5.9% 10%;
+  --shadow-glow: 0 0 40px hsl(195 46% 48% / 0.3);
+  --shadow-elegant: 0 10px 40px -15px hsl(195 46% 48% / 0.4);
+}
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
 
   .dark {
     --background: 222.2 84% 4.9%;

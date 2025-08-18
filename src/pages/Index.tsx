@@ -8,11 +8,11 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <EventHero />
-      <EventDetails />
+      {/* <EventDetails /> */}
       {/* Banner de contagem regressiva entre sessões */}
       <DeadlineBanner />
       <RegistrationForm />
-      <EventFooter />
+      {/* <EventFooter /> */}
     </div>
   );
 };

@@ -1,71 +1,67 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Users, Clock } from "lucide-react";
-import heroImage from "@/assets/hero-event.jpg";
+import { Calendar, MapPin } from "lucide-react";
+import heroImage from "@/assets/background.png";
+import heroLogo from "@/assets/logo.png";
+import rcc from "@/assets/rcc.png";
+import poco from "@/assets/poco.png";
 
 const EventHero = () => {
   const scrollToForm = () => {
-    document.getElementById('inscricao')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("inscricao")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      <div className="absolute inset-0 bg-gradient-hero opacity-90" />
-      
-      {/* Content */}
+      {/* <div className="absolute inset-0 bg-gradient-hero opacity-90" /> */}
+
       <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-in slide-in-from-bottom-4 duration-1000">
-            Conecte-se ao Futuro
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 animate-in slide-in-from-bottom-4 duration-1000 delay-200">
-            Um evento transformador que reunirá as mentes mais brilhantes para 
-            discutir inovação, tecnologia e o futuro dos negócios
-          </p>
-          
-          {/* Event Details */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 animate-in slide-in-from-bottom-4 duration-1000 delay-400">
-            <div className="flex flex-col items-center space-y-2">
-              <Calendar className="w-8 h-8 text-primary-glow" />
-              <div className="text-sm font-semibold">15 de Março</div>
-              <div className="text-xs opacity-80">2025</div>
-            </div>
-            <div className="flex flex-col items-center space-y-2">
-              <Clock className="w-8 h-8 text-primary-glow" />
-              <div className="text-sm font-semibold">09:00 - 18:00</div>
-              <div className="text-xs opacity-80">Horário</div>
-            </div>
-            <div className="flex flex-col items-center space-y-2">
-              <MapPin className="w-8 h-8 text-primary-glow" />
-              <div className="text-sm font-semibold">Centro de Convenções</div>
-              <div className="text-xs opacity-80">São Paulo</div>
-            </div>
-            <div className="flex flex-col items-center space-y-2">
-              <Users className="w-8 h-8 text-primary-glow" />
-              <div className="text-sm font-semibold">500+ Participantes</div>
-              <div className="text-xs opacity-80">Networking</div>
-            </div>
+          <div className="mb-6 tracking-tight animate-in slide-in-from-bottom-4 duration-1000 flex flex-col items-center">
+            <img
+              src={heroLogo}
+              alt="Sedentos Logo"
+              className="w-[40vw] mb-4 animate-in slide-in-from-bottom-4 duration-1000"
+            />
           </div>
+          <div className="flex justify-center items-center gap-4 mb-8">
+            <Calendar className="w-8 h-8 text-primary-glow" />
+            <span className="text-xl md:text-2xl font-semibold">26 a 28 de Setembro</span>
+          </div>
+          <div className="flex justify-center items-center gap-4 mb-8">
+            <MapPin className="w-8 h-8 text-primary-glow" />
+            <span className="text-lg md:text-xl font-semibold"> Imperatriz - MA</span>
+          </div>
+          <p className="text-lg md:text-2xl mb-4 block mt-2 font-bold text-[#007EBD] tracking-wider relative drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+            Tema: Fé & Conversão
+          </p>
+          <p className="text-xl md:text-3xl mb-8 opacity-95 animate-in slide-in-from-bottom-4 duration-1000 delay-200 text-center">
+            <span className="block bg-gradient-to-r from-primary-glow to-secondary-foreground bg-clip-text text-transparent font-semibold tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+              "Mas o que beber da água que eu lhe der jamais terá sede"
+            </span>
+            <span className="block mt-2 font-bold text-accent tracking-wider relative drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+              João 04,14
+              <span className="absolute left-1/2 -translate-x-1/2 -bottom-1 w-8 h-0.5 bg-accent/70 rounded-full"></span>
+            </span>
+          </p>
 
-          <Button 
-            variant="hero" 
-            size="lg" 
+          <Button
+            variant="hero"
+            size="lg"
             onClick={scrollToForm}
-            className="text-xl px-12 py-6 animate-in slide-in-from-bottom-4 duration-1000 delay-600"
-          >
-            Inscreva-se Agora
+            className="text-xl px-12 py-6 animate-in slide-in-from-bottom-4 duration-1000 delay-600">
+            Inscreva-se
           </Button>
+
+          <div className="mt-8 flex justify-center gap-8">
+            <img src={poco} alt="Poço de Jacó" className="h-26" />
+            <img src={rcc} alt="RCC Diocese de Imperatriz" className="h-26" />
+          </div>
         </div>
       </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-4 h-4 bg-primary-glow rounded-full animate-bounce" />
-      <div className="absolute top-32 right-20 w-6 h-6 bg-white/20 rounded-full animate-pulse" />
-      <div className="absolute bottom-40 left-20 w-3 h-3 bg-primary-glow rounded-full animate-ping" />
     </section>
   );
 };
