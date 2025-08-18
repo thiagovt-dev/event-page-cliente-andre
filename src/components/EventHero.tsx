@@ -24,7 +24,7 @@ const EventHero = () => {
             <img
               src={heroLogo}
               alt="Sedentos Logo"
-              className="w-[40vw] mb-4 animate-in slide-in-from-bottom-4 duration-1000"
+              className="w-[90vw] md:w-[40vw] mb-4 animate-in slide-in-from-bottom-4 duration-1000"
             />
           </div>
           <div className="flex justify-center items-center gap-4 mb-8">
