@@ -32,13 +32,13 @@ const EventHero = () => {
             <Calendar className="w-8 h-8 text-primary-glow" />
             <span className="text-lg md:text-xl font-semibold">26 a 28 de Setembro</span>
           </div>
-          <div className="flex justify-center items-center gap-4 mb-8">
+          {/* <div className="flex justify-center items-center gap-4 mb-8">
             <MapPin className="w-8 h-8 text-primary-glow" />
             <span className="text-lg font-semibold"> Imperatriz - MA</span>
           </div>
           <p className="text-lg md:text-2xl block mt-2 font-bold text-[#007EBD] tracking-wider relative drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
             Tema: Fé & Conversão
-          </p>
+          </p> */}
           <div className=" tracking-tight animate-in slide-in-from-bottom-4 duration-1000 flex flex-col items-center">
             <img
               src={tema}

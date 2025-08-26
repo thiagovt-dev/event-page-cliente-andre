@@ -16,7 +16,7 @@ const WhatIsSection = () => {
           </div>
 
           <h2  className="text-lg md:text-2xl block mb-6 font-bold text-[#007EBD] tracking-wider relative drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
-            Conheça a proposta do evento
+            Conheça mais sobre essa experiência
           </h2>
 
           <p className="text-primary md:text-xl text-lg leading-relaxed mb-8 max-w-xl font-extrabold">
