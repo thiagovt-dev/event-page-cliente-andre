@@ -20,44 +20,44 @@ const RegistrationForm = () => {
             {/* Event Summary */}
             <div className="space-y-6">
               <Card className="border-2 border-primary/20 hover:border-primary/40 transition-smooth">
-              <CardHeader>
-                <CardTitle className="text-2xl md:text-3xl">Resumo do Evento</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6 md:space-y-7">
-                <div className="flex items-center space-x-3">
-                <Calendar className="w-6 h-6 text-primary" />
-                <div>
-                  <div className="font-semibold text-lg md:text-xl">25 a 26 de Setembro</div>
-                </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                <DollarSign className="w-6 h-6 text-primary" />
-                <div>
-                  <div className="font-semibold text-lg md:text-xl">Valor: R$ 180,00</div>
-                  <div className="font-semibold text-base md:text-lg">lote único</div>
-                </div>
-                </div>
-                <div className="flex flex-col ">
-                <div className="flex items-center space-x-3 mb-2">
-                  <Info className="w-6 h-6 text-primary" />
-                  <div className="font-semibold text-lg md:text-xl">Incluso no valor</div>
-                </div>
-                <ul className="list-disc pl-5 text-base md:text-lg space-y-2">
-                  <li>Transporte até o local</li>
-                  <li>
-                  Todas as alimentações (Café da manhã, almoço, janta e dois lanches por dia)
-                  </li>
-                  <li>Lembranças, mimos e etc...</li>
-                </ul>
-                </div>
-                <div className="flex items-center space-x-3">
-                <Users className="w-6 h-6 text-primary" />
-                <div>
-                  <div className="font-semibold text-lg md:text-xl">Vagas Limitadas</div>
-                  {/* <div className="text-sm text-muted-foreground">Apenas 500 participantes</div> */}
-                </div>
-                </div>
-              </CardContent>
+                <CardHeader>
+                  <CardTitle className="text-2xl md:text-3xl">Resumo do Evento</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6 md:space-y-7">
+                  <div className="flex items-center space-x-3">
+                    <Calendar className="w-6 h-6 text-primary" />
+                    <div>
+                      <div className="font-semibold text-lg md:text-xl">25 a 26 de Setembro</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <DollarSign className="w-6 h-6 text-primary" />
+                    <div>
+                      <div className="font-semibold text-lg md:text-xl">Valor: R$ 180,00</div>
+                      <div className="font-semibold text-base md:text-lg">lote único</div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col ">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <Info className="w-6 h-6 text-primary" />
+                      <div className="font-semibold text-lg md:text-xl">Incluso no valor</div>
+                    </div>
+                    <ul className="list-disc pl-5 text-base md:text-lg space-y-2">
+                      <li>Transporte até o local</li>
+                      <li>
+                        Todas as alimentações (Café da manhã, almoço, janta e dois lanches por dia)
+                      </li>
+                      <li>Lembranças, mimos e etc...</li>
+                    </ul>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Users className="w-6 h-6 text-primary" />
+                    <div>
+                      <div className="font-semibold text-lg md:text-xl">Vagas Limitadas</div>
+                      {/* <div className="text-sm text-muted-foreground">Apenas 500 participantes</div> */}
+                    </div>
+                  </div>
+                </CardContent>
               </Card>
 
               {/* <Card className="bg-gradient-primary text-white">
@@ -100,7 +100,7 @@ const RegistrationForm = () => {
                       className="bg-gradient-to-r from-primary to-primary-glow text-white px-8 py-4 text-lg font-semibold shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105"
                       onClick={() =>
                         window.open(
-                          "https://docs.google.com/forms/d/e/1FAIpQLSfD4vMppfkvBLwqUTGjRkcBZQU33eqNCJfkNZ4G_mUYxKXOrA/viewform?usp=header",
+                          "https://docs.google.com/forms/d/e/1FAIpQLScs5hYI2NbKTjPPTY8cwj2f2LmNqezGUwoDjU-sUxcjptfo6w/viewform?usp=dialog",
                           "_blank"
                         )
                       }>

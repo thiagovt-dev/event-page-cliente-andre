@@ -3,20 +3,25 @@ import { useEffect, useMemo, useState } from "react";
 
 type DeadlineBannerProps = {
   // Opcional: defina um prazo fixo (ISO string ou Date).
-  // Se não for passado, cria um prazo de 24h a partir da primeira visita (persistido em localStorage).
+  // Se não for passado, usa 26/09 (fim do dia) do ano corrente.
   deadline?: string | Date;
 };
 
-const STORAGE_KEY = "registrationDeadline";
-
 function formatTime(msRemaining: number) {
-  if (msRemaining <= 0) return { hours: "00", minutes: "00", seconds: "00" };
+  if (msRemaining <= 0)
+    return { days: "00", hours: "00", minutes: "00", seconds: "00" };
   const totalSeconds = Math.floor(msRemaining / 1000);
-  const hours = Math.floor(totalSeconds / 3600);
+  const days = Math.floor(totalSeconds / (3600 * 24));
+  const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
   const seconds = totalSeconds % 60;
   const pad = (n: number) => n.toString().padStart(2, "0");
-  return { hours: pad(hours), minutes: pad(minutes), seconds: pad(seconds) };
+  return {
+    days: pad(days),
+    hours: pad(hours),
+    minutes: pad(minutes),
+    seconds: pad(seconds),
+  };
 }
 
 const DeadlineBanner = ({ deadline }: DeadlineBannerProps) => {
@@ -32,19 +37,17 @@ const DeadlineBanner = ({ deadline }: DeadlineBannerProps) => {
       return;
     }
 
-    // Caso contrário, tenta recuperar do localStorage ou cria 24h a partir de agora
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      const ts = Number(stored);
-      if (!Number.isNaN(ts)) {
-        setTargetTime(ts);
-        return;
-      }
+    // Padrão: 26/09 do ano corrente às 23:59:59 (horário local)
+    const nowDate = new Date();
+    const currentYear = nowDate.getFullYear();
+    const target = new Date(currentYear, 8, 26, 23, 59, 59, 999); // mês 8 = Setembro
+
+    // Caso já tenha passado neste ano, define para o próximo ano
+    if (target.getTime() <= nowDate.getTime()) {
+      target.setFullYear(currentYear + 1);
     }
 
-    const newTarget = Date.now() + 24 * 60 * 60 * 1000; // 24 horas
-    localStorage.setItem(STORAGE_KEY, String(newTarget));
-    setTargetTime(newTarget);
+    setTargetTime(target.getTime());
   }, [deadline]);
 
   // Tick do relógio a cada segundo
@@ -58,7 +61,7 @@ const DeadlineBanner = ({ deadline }: DeadlineBannerProps) => {
     return Math.max(targetTime - now, 0);
   }, [targetTime, now]);
 
-  const { hours, minutes, seconds } = useMemo(() => formatTime(remaining), [remaining]);
+  const { days, hours, minutes, seconds } = useMemo(() => formatTime(remaining), [remaining]);
 
   const isExpired = remaining <= 0;
 
@@ -75,7 +78,7 @@ const DeadlineBanner = ({ deadline }: DeadlineBannerProps) => {
               Contagem Regressiva
             </p>
             <h3 className="text-2xl md:text-3xl font-bold">
-              {isExpired ? "Inscrições encerradas" : "Últimas 24 horas para se inscrever"}
+              {isExpired ? "Inscrições encerradas" : "Não perca a chance de se inscrever!"}
             </h3>
             <p className="text-muted-foreground mt-1">
               {isExpired
@@ -85,7 +88,9 @@ const DeadlineBanner = ({ deadline }: DeadlineBannerProps) => {
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="flex items-center gap-3 md:gap-4">
+            <div className="flex items-center gap-2 md:gap-4">
+              <TimeBox label="Dias" value={days} />
+              <span className="text-2xl font-bold -mt-3">:</span>
               <TimeBox label="Horas" value={hours} />
               <span className="text-2xl font-bold -mt-3">:</span>
               <TimeBox label="Min" value={minutes} />
@@ -118,4 +123,3 @@ const TimeBox = ({ label, value }: { label: string; value: string }) => (
 );
 
 export default DeadlineBanner;
-

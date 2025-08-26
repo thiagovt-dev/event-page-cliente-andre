@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin } from "lucide-react";
 import heroImage from "@/assets/background.png";
 import heroLogo from "@/assets/logo.png";
+import tema from "@/assets/tema 1.png";
 import rcc from "@/assets/rcc.png";
 import poco from "@/assets/poco.png";
 
@@ -18,27 +19,34 @@ const EventHero = () => {
       />
       {/* <div className="absolute inset-0 bg-gradient-hero opacity-90" /> */}
 
-      <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
+      <div className="relative z-10 container mx-auto px-4 py-10 text-center text-white">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-6 tracking-tight animate-in slide-in-from-bottom-4 duration-1000 flex flex-col items-center">
+          <div className="tracking-tight animate-in slide-in-from-bottom-4 duration-1000 flex flex-col items-center">
             <img
               src={heroLogo}
               alt="Sedentos Logo"
-              className="w-[90vw] md:w-[40vw] mb-4 animate-in slide-in-from-bottom-4 duration-1000"
+              className="w-[90vw] md:w-[35vw] animate-in slide-in-from-bottom-4 duration-1000"
             />
           </div>
-          <div className="flex justify-center items-center gap-4 mb-8">
+          <div className="flex justify-center items-center gap-4 mb-4">
             <Calendar className="w-8 h-8 text-primary-glow" />
-            <span className="text-xl md:text-2xl font-semibold">26 a 28 de Setembro</span>
+            <span className="text-lg md:text-xl font-semibold">26 a 28 de Setembro</span>
           </div>
           <div className="flex justify-center items-center gap-4 mb-8">
             <MapPin className="w-8 h-8 text-primary-glow" />
-            <span className="text-lg md:text-xl font-semibold"> Imperatriz - MA</span>
+            <span className="text-lg font-semibold"> Imperatriz - MA</span>
           </div>
-          <p className="text-lg md:text-2xl mb-4 block mt-2 font-bold text-[#007EBD] tracking-wider relative drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+          <p className="text-lg md:text-2xl block mt-2 font-bold text-[#007EBD] tracking-wider relative drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
             Tema: Fé & Conversão
           </p>
-          <p className="text-xl md:text-3xl mb-8 opacity-95 animate-in slide-in-from-bottom-4 duration-1000 delay-200 text-center">
+          <div className=" tracking-tight animate-in slide-in-from-bottom-4 duration-1000 flex flex-col items-center">
+            <img
+              src={tema}
+              alt="tema"
+              className="w-[90vw] md:w-[20vw] mb-2 animate-in slide-in-from-bottom-4 duration-1000"
+            />
+          </div>
+          {/* <p className="text-xl md:text-3xl mb-8 opacity-95 animate-in slide-in-from-bottom-4 duration-1000 delay-200 text-center">
             <span className="block bg-gradient-to-r from-primary-glow to-secondary-foreground bg-clip-text text-transparent font-semibold tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
               "Mas o que beber da água que eu lhe der jamais terá sede"
             </span>
@@ -46,7 +54,7 @@ const EventHero = () => {
               João 04,14
               <span className="absolute left-1/2 -translate-x-1/2 -bottom-1 w-8 h-0.5 bg-accent/70 rounded-full"></span>
             </span>
-          </p>
+          </p> */}
 
           <Button
             variant="hero"
