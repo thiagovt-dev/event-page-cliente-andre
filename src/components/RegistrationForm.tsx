@@ -27,7 +27,7 @@ const RegistrationForm = () => {
                   <div className="flex items-center space-x-3">
                     <Calendar className="w-6 h-6 text-primary" />
                     <div>
-                      <div className="font-semibold text-lg md:text-xl">25 a 26 de Setembro</div>
+                      <div className="font-semibold text-lg md:text-xl">26 a 28 de Setembro</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
