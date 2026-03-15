@@ -89,7 +89,7 @@ const RegistrationForm = () => {
                       className="bg-[#ff4530] px-8 py-4 text-lg font-semibold text-white shadow-[0_14px_28px_-12px_rgba(243,62,44,0.9)] transition-all duration-300 hover:scale-105 hover:bg-[#df3320]"
                       onClick={() =>
                         window.open(
-                          "https://docs.google.com/forms/d/e/1FAIpQLScs5hYI2NbKTjPPTY8cwj2f2LmNqezGUwoDjU-sUxcjptfo6w/viewform?usp=dialog",
+                          "https://docs.google.com/forms/d/e/1FAIpQLSfIemZfA89Wgbfl7g_P3GwP-AR86ORoIiyzQbzdH4QnDi-08w/viewform?usp=dialog",
                           "_blank",
                         )
                       }>
