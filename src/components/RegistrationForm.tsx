@@ -1,37 +1,40 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Users, Calendar, MapPin, DollarSign, Info } from "lucide-react";
+import { ExternalLink, Users, Calendar, DollarSign, Info } from "lucide-react";
+import nameLogo from "@/assets/v2/NAME.png";
 
 const RegistrationForm = () => {
   return (
-    <section id="inscricao" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section
+      id="inscricao"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,rgba(5,164,217,0.06),rgba(255,255,255,0.96)_35%)] py-20">
+      <div className="mx-auto max-w-6xl px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-              Garante Sua Vaga
+          <div className="mb-12 text-center">
+            <img src={nameLogo} alt="Sedentos" className="mx-auto mb-5 w-[min(460px,92vw)]" />
+            <h2 className="mb-4 text-4xl uppercase tracking-[0.07em] text-[#0f3f77] md:text-6xl">
+              Garanta sua vaga
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Preencha o formulário abaixo e faça parte desta experiência única
+            <p className="text-lg text-slate-600 md:text-xl">
+              Faça sua inscrição e participe dessa experiência com Deus.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Event Summary */}
             <div className="space-y-6">
-              <Card className="border-2 border-primary/20 hover:border-primary/40 transition-smooth">
-                <CardHeader>
+              <Card className="border-2 border-[#1f57c5]/20 bg-white/80 shadow-[0_22px_50px_-24px_rgba(22,58,145,0.7)] backdrop-blur-sm transition-smooth hover:border-[#1f57c5]/40">
+                <CardHeader className="pb-2">
                   <CardTitle className="text-2xl md:text-3xl">Resumo do Evento</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6 md:space-y-7">
                   <div className="flex items-center space-x-3">
-                    <Calendar className="w-6 h-6 text-primary" />
+                    <Calendar className="w-6 h-6 text-[#1f57c5]" />
                     <div>
-                      <div className="font-semibold text-lg md:text-xl">26 a 28 de Setembro</div>
+                      <div className="font-semibold text-lg md:text-xl">25 a 27 de Abril</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <DollarSign className="w-6 h-6 text-primary" />
+                    <DollarSign className="w-6 h-6 text-[#1f57c5]" />
                     <div>
                       <div className="font-semibold text-lg md:text-xl">Valor: R$ 180,00</div>
                       <div className="font-semibold text-base md:text-lg">lote único</div>
@@ -39,7 +42,7 @@ const RegistrationForm = () => {
                   </div>
                   <div className="flex flex-col ">
                     <div className="flex items-center space-x-3 mb-2">
-                      <Info className="w-6 h-6 text-primary" />
+                      <Info className="w-6 h-6 text-[#1f57c5]" />
                       <div className="font-semibold text-lg md:text-xl">Incluso no valor</div>
                     </div>
                     <ul className="list-disc pl-5 text-base md:text-lg space-y-2">
@@ -51,45 +54,31 @@ const RegistrationForm = () => {
                     </ul>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Users className="w-6 h-6 text-primary" />
+                    <Users className="w-6 h-6 text-[#1f57c5]" />
                     <div>
                       <div className="font-semibold text-lg md:text-xl">Vagas Limitadas</div>
-                      {/* <div className="text-sm text-muted-foreground">Apenas 500 participantes</div> */}
                     </div>
                   </div>
                 </CardContent>
               </Card>
-
-              {/* <Card className="bg-gradient-primary text-white">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Incluído na Inscrição:</h3>
-                <ul className="space-y-2 text-sm">
-                <li>✓ Acesso a todas as palestras</li>
-                <li>✓ Material didático exclusivo</li>
-                <li>✓ Coffee breaks e almoço</li>
-                <li>✓ Certificado de participação</li>
-                <li>✓ Acesso ao networking exclusivo</li>
-                <li>✓ Kit do participante</li>
-                </ul>
-              </CardContent>
-              </Card> */}
             </div>
 
-            {/* Call to Action para Inscrição */}
             <div>
-              <Card className="overflow-hidden shadow-elegant text-center">
-                <CardHeader className="bg-gradient-primary text-white">
-                  <CardTitle className="text-2xl">Garanta Sua Vaga Agora!</CardTitle>
+              <Card className="overflow-hidden text-center shadow-[0_22px_50px_-24px_rgba(254,65,46,0.75)]">
+                <CardHeader className="bg-[linear-gradient(125deg,#ff5a41,#f23f2d_45%,#d93225)] text-white">
+                  <CardTitle className="text-2xl uppercase tracking-[0.08em]">
+                    Garanta sua vaga agora!
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="p-8">
                   <div className="space-y-6">
-                    <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
+                    <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[linear-gradient(125deg,#2a69da,#05a4d9)]">
                       <ExternalLink className="w-10 h-10 text-white" />
                     </div>
 
                     <div>
-                      <h3 className="text-2xl font-bold mb-3">Inscrição Rápida e Segura</h3>
-                      <p className="text-muted-foreground mb-6">
+                      <h3 className="mb-3 text-2xl font-bold">Inscrição rápida e segura</h3>
+                      <p className="mb-6 text-muted-foreground">
                         Clique no botão abaixo para acessar nosso formulário oficial do Google Forms
                         e garantir sua participação neste evento único.
                       </p>
@@ -97,18 +86,18 @@ const RegistrationForm = () => {
 
                     <Button
                       size="lg"
-                      className="bg-gradient-to-r from-primary to-primary-glow text-white px-8 py-4 text-lg font-semibold shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105"
+                      className="bg-[#ff4530] px-8 py-4 text-lg font-semibold text-white shadow-[0_14px_28px_-12px_rgba(243,62,44,0.9)] transition-all duration-300 hover:scale-105 hover:bg-[#df3320]"
                       onClick={() =>
                         window.open(
                           "https://docs.google.com/forms/d/e/1FAIpQLScs5hYI2NbKTjPPTY8cwj2f2LmNqezGUwoDjU-sUxcjptfo6w/viewform?usp=dialog",
-                          "_blank"
+                          "_blank",
                         )
                       }>
                       <ExternalLink className="w-5 h-5 mr-2" />
                       INSCREVER-SE AGORA
                     </Button>
 
-                    <div className="grid grid-cols-3 gap-4 mt-6 pt-6 border-t">
+                    <div className="mt-6 grid grid-cols-3 gap-4 border-t pt-6">
                       <div>
                         <div className="text-2xl mb-1">⚡</div>
                         <p className="text-sm font-medium">Processo Rápido</p>
