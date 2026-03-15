@@ -30,13 +30,13 @@ const RegistrationForm = () => {
                   <div className="flex items-center space-x-3">
                     <Calendar className="w-6 h-6 text-[#1f57c5]" />
                     <div>
-                      <div className="font-semibold text-lg md:text-xl">25 a 27 de Abril</div>
+                      <div className="font-semibold text-lg md:text-xl">24 a 26 de Abril</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <DollarSign className="w-6 h-6 text-[#1f57c5]" />
                     <div>
-                      <div className="font-semibold text-lg md:text-xl">Valor: R$ 180,00</div>
+                      <div className="font-semibold text-lg md:text-xl">Valor: R$ 200,00</div>
                       <div className="font-semibold text-base md:text-lg">lote único</div>
                     </div>
                   </div>
