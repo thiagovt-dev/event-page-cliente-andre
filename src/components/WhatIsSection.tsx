@@ -20,17 +20,17 @@ const WhatIsSection = () => {
           </h2>
 
           <p className="mb-5 text-base leading-relaxed text-slate-700 md:text-lg">
-            O Sedentos 2K26.1 e um retiro de jovens que desejam viver um encontro real com o
+            O Sedentos 2K26.1 é um retiro de jovens que desejam viver um encontro real com o
             Espírito Santo, em um ambiente de oração, comunhão e alegria.
           </p>
 
           <p className="mb-5 text-base leading-relaxed text-slate-700 md:text-lg">
-            Serão dias de pregações, louvor, adoração e partilhas que ajudam você a mergulhar mais
+            Serão dias de pregações, louvor, adoração e partilhas que ajudarão você a mergulhar mais
             fundo no chamado de Deus para a sua vida.
           </p>
 
           <p className="rounded-xl border border-[#2a69da]/20 bg-white/75 px-4 py-3 text-sm font-semibold uppercase tracking-[0.09em] text-[#12478b] shadow-sm md:text-base">
-            Não e apenas um evento. E uma resposta para quem sente sede de mais.
+            Não é apenas um evento. É uma resposta para quem sente sede de mais.
           </p>
         </div>
 
